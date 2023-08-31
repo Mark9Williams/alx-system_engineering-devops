@@ -3,3 +3,4 @@ pwd: Prints the absolute path name of the current working directory.
 ls: Display the contents list of your current directory.
 cd: A script that changes the working directory to the user’s home directory.
 ls -1: Displays current directory contents in a long format
+ls -la: Display current directory contents, including hidden files (starting with .) (In long format)
