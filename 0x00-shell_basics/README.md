@@ -20,3 +20,5 @@ In -s /bin/ls__ls__: Create a symbolic link to /bin/ls, named __ls__. The symbol
 cp -un *.html ../: Write a script that Creates a script that copies all the HTML files from the current working directory to the parent of the working directory, but only copy files that did not exist in the parent of the working directory or were newer than the versions in the parent of the working directory.
 
 mv [[:upper:]]: Create a script that moves all files beginning with an uppercase letter to the directory /tmp/u
+
+rm *~: Create a script that deletes all files in the current working directory that end with the character ~.
