@@ -10,3 +10,5 @@ tail -n 10 /etc/passwd: Script that displays the last 10 lines of /etc/passwd
 tail -n 10 /etc/passwd: Script that displays the first 10 lines of /etc/passwd
 
 awk "NR==3":Script that displays the third line of the file iacta.
+
+echo "Best School" > "\*\\'"Best School"\'\\*$\?\*\*\*\*\*:)": Write a shell script that creates a file named exactly \*\\'"Best School"\'\\*$\?\*\*\*\*\*:) containing the text Best School ending by a new line
