@@ -19,3 +19,6 @@ tail -n 1 iacta >> iacta: Write a script that duplicates the last line of the fi
 
 find . -type f -name "*js" -delete: Write a script that deletes all the regular files (not the directories) with a .js extension that are present in the current directory and all its subfolders
 
+find . -type d -not path '.' | wc -l: Write a script that counts the number of directories and sub-directories in the current directory.
+The current and parent directories should not be taken into account
+Hidden directories should be counted
