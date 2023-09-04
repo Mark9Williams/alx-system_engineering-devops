@@ -44,3 +44,5 @@ grep "^[a-zA-Z]" /etc/ssh/sshd_config: Display all lines of the file /etc/ssh/ss
 include capital letters as well
 
 tr 'Ac' 'Ze': Replace all characters A and c from input to Z and e respectively.
+
+tr -d 'cC': Create a script that removes all letters c and C from input.
