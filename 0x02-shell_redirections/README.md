@@ -39,3 +39,6 @@ grep -c "bin" /etc/passwd: Display the number of lines that contain the pattern 
 grep -A 3 "root" /etc/passwd:i Display lines containing the pattern “root” and 3 lines after them in the file /etc/passwd.
 
 grep -v "bin" /etc/passwd: Display all the lines in the file /etc/passwd that do not contain the pattern “bin”.
+
+grep "^[a-zA-Z]" /etc/ssh/sshd_config: Display all lines of the file /etc/ssh/sshd_config starting with a letter.
+include capital letters as well
