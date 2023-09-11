@@ -26,3 +26,7 @@ echo $((2#BINARY)): Write a script that converts a number from base 2 to base 10
 The number in base 2 is stored in the environment variable BINARY
 
 echo {a..z}{a..z}|tr ' ' '\n'|grep -v 'oo': a script that prints all possible combinations of two letters, except oo.
+
+echo "$NUM" | awk '{printf "%d.2f\n", $1}:  a shell script that prints a number with two decimal places, followed by a new line.
+The number will be stored in the environment variable NUM.
+It should be one line of code
