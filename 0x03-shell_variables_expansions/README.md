@@ -24,3 +24,5 @@ BREATH and LOVE are environment variables
 
 echo $((2#BINARY)): Write a script that converts a number from base 2 to base 10.
 The number in base 2 is stored in the environment variable BINARY
+
+echo {a..z}{a..z}|tr ' ' '\n'|grep -v 'oo': a script that prints all possible combinations of two letters, except oo.
