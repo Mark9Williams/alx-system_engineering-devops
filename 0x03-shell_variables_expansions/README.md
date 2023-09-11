@@ -9,3 +9,7 @@ echo $PATH | tr ':' '\n' | wc -l: Create a script that counts the number of dire
 printenv: Create a script that lists environment variables.
 
 set: A script that lists all local variables and environment variables, and functions.
+
+BEST="School": a script that creates a new local variable.
+
+export BEST ="School": a script that creates a new global variable.
