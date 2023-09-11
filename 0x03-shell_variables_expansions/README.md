@@ -18,3 +18,7 @@ echo $((128 + $TRUEKNOWLEDGE): a script that prints the result of the addition o
 
 echo $(( $POWER / $DIVIDE )):  a script that prints the result of POWER divided by DIVIDE, followed by a new line.
 POWER and DIVIDE are environment variables
+
+echo $(( $BREATH ** $ LOVE )): Write a script that displays the result of BREATH to the power LOVE
+BREATH and LOVE are environment variables
+
