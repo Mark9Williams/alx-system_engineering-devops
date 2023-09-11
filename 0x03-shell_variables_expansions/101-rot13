@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "$text | 'A-ZA-z' 'N-ZA-Mnza-m'
+tr 'A-Za-z' 'N-ZA-Mn-za-m'
