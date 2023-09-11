@@ -27,6 +27,9 @@ The number in base 2 is stored in the environment variable BINARY
 
 echo {a..z}{a..z}|tr ' ' '\n'|grep -v 'oo': a script that prints all possible combinations of two letters, except oo.
 
-echo "$NUM" | awk '{printf "%d.2f\n", $1}:  a shell script that prints a number with two decimal places, followed by a new line.
+printf "%.2f" $NUM:  a shell script that prints a number with two decimal places, followed by a new line.
 The number will be stored in the environment variable NUM.
 It should be one line of code
+
+printf "%.2f\n" "$NUM": Write a script that converts a number from base 10 to base 16.
+The number in base 10 is stored in the environment variable DECIMAL
