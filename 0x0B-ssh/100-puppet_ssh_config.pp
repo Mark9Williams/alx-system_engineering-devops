@@ -12,8 +12,8 @@ file_line {'No Password Aunthentication':
 }
 
 file_line{'private_key ~/.ssh/school':
-        ensure => 'present',
         path   => 'etc/ssh/ssh_config',
         line   => 'IdentityFile ~/.ssh/school',
         match  => '^IdentityFile',
+        ensure => 'present',
 }
