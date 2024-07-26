@@ -3,7 +3,7 @@
 day=$(date+"%d")
 month=$(date+"%m")
 year=$(date+"%Y")
-file="$day-$month-$year.tar.gz"
+file_name="$day-$month-$year.tar.gz"
 
 mysqldump --all-databases -u --password="$1" > backup.sql
-tar -czvf "$file" backup.sql
+tar -czvf "$file_name" backup.sql
