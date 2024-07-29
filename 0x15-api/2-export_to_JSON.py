@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-import csv
+import json
 import requests
 import sys
 
@@ -20,11 +20,19 @@ todos_url = f"https://jsonplaceholder.typicode.com/users/{employee_id}/todos"
 todos_response = requests.get(todos_url)
 todos = todos_response.json()
 
-# Open a CSV file to write the data
-csv_filename = f"{employee_id}.csv"
-with open(csv_filename, mode='w', newline='') as csvfile:
-    csv_writer = csv.writer(csvfile, quoting=csv.QUOTE_ALL)
-    # Write the CSV data
-    for todo in todos:
-        csv_writer.writerow([employee_id, username, todo.get('completed'),
-                             todo.get('title')])
+# Prepare the data in the specified JSON format
+data = {
+    employee_id: [
+        {
+            "task": todo.get('title'),
+            "completed": todo.get('completed'),
+            "username": username
+        }
+        for todo in todos
+    ]
+}
+
+# Write the data to a JSON file
+json_filename = f"{employee_id}.json"
+with open(json_filename, mode='w') as jsonfile:
+    json.dump(data, jsonfile)
