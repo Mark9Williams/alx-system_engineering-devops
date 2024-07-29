@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+"""
+A script that fetches an employee's TODO lisst and exports
+data in the JSON format.
+"""
+
 import json
 import requests
 
