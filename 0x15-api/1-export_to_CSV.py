@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-import requests
 import csv
+import requests
 import sys
 
 if len(sys.argv) != 2:
@@ -26,5 +26,5 @@ with open(csv_filename, mode='w', newline='') as csvfile:
     csv_writer = csv.writer(csvfile, quoting=csv.QUOTE_ALL)
     # Write the CSV data
     for todo in todos:
-        csv_writer.writerow([employee_id, username,\
-			todo.get('completed'), todo.get('title')])
+        csv_writer.writerow([employee_id, username, 
+        todo.get('completed'), todo.get('title')])
