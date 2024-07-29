@@ -24,10 +24,10 @@ todos = todos_response.json()
 for user in users:
     user_id = str(user['id'])
     username = user['username']
-    
+
     # Filter todos for the current user
     user_todos = [todo for todo in todos if todo['userId'] == user['id']]
-    
+
     # Format the data as required
     all_tasks[user_id] = [
         {
