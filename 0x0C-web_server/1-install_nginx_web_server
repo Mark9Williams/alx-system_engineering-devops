@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+# A script that installs nginix and configures it
+
+# Update package lists
+sudo apt update
+
+# Install Nginx
+sudo apt install -y nginx
+
+# Create a new Nginx configuration file
+NGINX_CONF="/etc/nginx/sites-available/default"
+
+# Configure Nginx to listen on port 80 and serve "Hello World!"
+sudo bash -c "cat > $NGINX_CONF" <<EOF
+server {
+    listen 80;
+    root /var/www/html;
+    index index.html;
+
+    location / {
+        try_files \$uri \$uri/ =404;
+    }
+}
+EOF
+
+# Create the HTML file to be served
+sudo bash -c "echo 'Hello World!' > /var/www/html/index.html"
+
+# Restart Nginx without using systemctl
+sudo nginx -s reload
+
+# Check if Nginx is running
+sudo nginx -t
