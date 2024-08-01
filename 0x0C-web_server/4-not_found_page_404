@@ -4,17 +4,17 @@
 #custom 404 page
 
 # Update package lists
-sudo apt update
+apt update
 
 # Install Nginx
-sudo apt install -y nginx
+apt install -y nginx
 
 # Define Nginx configuration file path
 NGINX_CONF="/etc/nginx/sites-available/default"
 
 # Configure Nginx to listen on port 80, serve "Hello World!", and set up a 
 #custom 404 page
-sudo bash -c "cat > $NGINX_CONF" <<EOF
+bash -c "cat > $NGINX_CONF" <<EOF
 server {
     listen 80;
     root /var/www/html;
@@ -34,13 +34,13 @@ server {
 EOF
 
 # Create the HTML file to be served
-sudo bash -c "echo 'Hello World!' > /var/www/html/index.html"
+bash -c "echo 'Hello World!' > /var/www/html/index.html"
 
 # Create the custom 404 error page
-sudo bash -c "echo \"Ceci n'est pas une page\" > /var/www/html/custom_404.html"
+bash -c "echo \"Ceci n'est pas une page\" > /var/www/html/custom_404.html"
 
 # Restart Nginx without using systemctl
-sudo nginx -s reload
+nginx -s reload
 
 # Check if Nginx is running correctly
-sudo nginx -t
+nginx -t
