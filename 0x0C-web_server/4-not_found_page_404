@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-# A script that installs Nginx, sets up a basic configuration, and adds a
-#redirect
+# A script that installs Nginx, sets up a basic configuration with a
+#custom 404 page
 
 # Update package lists
 sudo apt update
@@ -12,8 +12,8 @@ sudo apt install -y nginx
 # Define Nginx configuration file path
 NGINX_CONF="/etc/nginx/sites-available/default"
 
-# Configure Nginx to listen on port 80, serve "Hello World!", and redirect
-#/redirect_me
+# Configure Nginx to listen on port 80, serve "Hello World!", and set up a 
+#custom 404 page
 sudo bash -c "cat > $NGINX_CONF" <<EOF
 server {
     listen 80;
@@ -24,15 +24,20 @@ server {
         try_files \$uri \$uri/ =404;
     }
 
-    # Redirect /redirect_me to another page with a 301 status
-    location /redirect_me {
-        return 301 https://youtu.be/0xEjAR187is;
+    # Custom 404 error page configuration
+    error_page 404 /custom_404.html;
+    location = /custom_404.html {
+        internal;
+        root /var/www/html;
     }
 }
 EOF
 
 # Create the HTML file to be served
 sudo bash -c "echo 'Hello World!' > /var/www/html/index.html"
+
+# Create the custom 404 error page
+sudo bash -c "echo \"Ceci n'est pas une page\" > /var/www/html/custom_404.html"
 
 # Restart Nginx without using systemctl
 sudo nginx -s reload
