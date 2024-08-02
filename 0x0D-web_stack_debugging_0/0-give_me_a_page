@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+# Pull the latest httpd (Apache) image
+docker pull httpd:latest
+
+# Create a directory for the HTML file
+mkdir -p ./my-apache-website
+
+# Create the HTML file with the content "Hello Holberton"
+echo "Hello Holberton" > ./my-apache-website/index.html
+
+# Run the Apache container with the directory mounted and ports mapped
+docker run -dit --name apache-container -p 8080:80 -v "$PWD/my-apache-website":/usr/local/apache2/htdocs/ httpd:latest
+
+# Verify that the container is running
+docker ps
+
