@@ -1,4 +1,4 @@
-
+![creative_2024-08-17_1723916839](https://github.com/user-attachments/assets/fb01930d-73cd-49a2-ab47-6dfefb3b0464)
 # Postmortem: Outage of the Job Recommender System on August 17, 2024.
 
 ## Issue Summary
