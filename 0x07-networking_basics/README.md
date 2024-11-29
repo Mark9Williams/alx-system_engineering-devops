@@ -1,0 +1,2 @@
+# 0x07. Networking basics #0
+Networking is essentially an important subject is the software development processing. Basic understanding of what happens when a client orders for a web page. Concepts like TCP/IP, UDP, versions of IP addresses is key for a software developer.
